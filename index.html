@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animalzin - Petshop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Animalzin - Petshop</h1>
+        <p>Seu pet em boas mãos</p>
+    </header>
+
+    <section id="produtos">
+        <h2>Nossos Produtos</h2>
+        <div class="carousel">
+            <button class="prev" onclick="prevSlide('produto')">&#10094;</button>
+            <div class="carousel-content" id="produto-carousel">
+                <div class="carousel-item produto-item">
+                    <h3>Ração</h3>
+                    <img src="imagem1.jpg" alt="Ração">
+                    <p>As melhores marcas para o seu pet.</p>
+                </div>
+                <div class="carousel-item produto-item">
+                    <h3>Petiscos</h3>
+                    <img src="imagem2.jpg" alt="Petiscos">
+                    <p>Delícias saudáveis para todos os pets.</p>
+                </div>
+                <div class="carousel-item produto-item">
+                    <h3>Caminhas</h3>
+                    <img src="imagem3.jpg" alt="Caminhas">
+                    <p>Conforto e segurança para seu animal.</p>
+                </div>
+                <div class="carousel-item produto-item">
+                    <h3>Brinquedos</h3>
+                    <img src="imagem4.jpg" alt="Brinquedos">
+                    <p>Diversão garantida para seu amigo.</p>
+                </div>
+            </div>
+            <button class="next" onclick="nextSlide('produto')">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="carousel">
+            <button class="prev" onclick="prevSlide('servico')">&#10094;</button>
+            <div class="carousel-content" id="servico-carousel">
+                <div class="carousel-item servico-item">
+                    <h3>Tosa</h3>
+                    <img src="imagem5.jpg" alt="Tosa">
+                    <p>Cortes estilosos e higiênicos.</p>
+                </div>
+                <div class="carousel-item servico-item">
+                    <h3>Banho</h3>
+                    <img src="imagem6.jpg" alt="Banho">
+                    <p>Limpeza e cuidados especiais.</p>
+                </div>
+                <div class="carousel-item servico-item">
+                    <h3>Adestramento</h3>
+                    <img src="imagem7.jpg" alt="Adestramento">
+                    <p>Ensine seu pet com métodos modernos.</p>
+                </div>
+            </div>
+            <button class="next" onclick="nextSlide('servico')">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="lead-capture">
+        <h2>Agende um Serviço</h2>
+        <form id="leadForm" action="javascript:void(0);">
+            <label for="nome-cliente">Nome do Cliente:</label>
+            <input type="text" id="nome-cliente" name="nome-cliente" required>
+
+            <label for="tipo-pet">Tipo de Pet:</label>
+            <select id="tipo-pet" name="tipo-pet" required>
+                <option value="cachorro">Cachorro</option>
+                <option value="gato">Gato</option>
+                <option value="coelho">Coelho</option>
+                <option value="passaro">Pássaro</option>
+                <option value="peixe">Peixe</option>
+            </select>
+
+            <label for="nome-pet">Nome do Pet:</label>
+            <input type="text" id="nome-pet" name="nome-pet" required>
+
+            <label for="tipo-servico">Tipo de Serviço:</label>
+            <select id="tipo-servico" name="tipo-servico" required>
+                <option value="tosa">Tosa</option>
+                <option value="banho">Banho</option>
+                <option value="adestramento">Adestramento</option>
+            </select>
+
+            <label for="email-contato">Email para Contato:</label>
+            <input type="email" id="email-contato" name="email-contato" required>
+
+            <label for="telefone-contato">Telefone para Contato:</label>
+            <input type="tel" id="telefone-contato" name="telefone-contato" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Animalzin. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p>Agradecemos pela preferência, entraremos em contato em breve!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
